@@ -1,5 +1,9 @@
 package pl.gda.wsb;
 
+import java.util.ArrayList;
+
+import static java.lang.System.out;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,6 +17,11 @@ public class Main {
         Human2.firstName = "Mateusz";
         Human2.lastName = "Grochowalski";
         Human2.age = 33;
+
+        Human Human3 = new Human();
+        Human3.firstName = "Abraham";
+        Human3.lastName = "Jankowski";
+        Human3.age = 35;
 
         Animal Animal1 = new Animal();
         Animal1.type = "Tygrys";
@@ -33,17 +42,31 @@ public class Main {
         Phone2.producer = "Samsung";
         Phone2.model = "S8";
 
+
+        StringBuilder animalWeight = new StringBuilder("Reksio ktory wazy ");
+        StringBuilder fadoWeight = new StringBuilder("ktorego waga wynosi  ");
+
         if(Animal1.weight>Animal2.weight){
-            System.out.println("Reksio ktory wazy " +Animal1.weight +" kg jest ciezszy od Fado");
-        } else{System.out.println("Fado który wazy " +Animal2.weight +" Jest Ciezszy od Tygrysa");}
+            out.println(animalWeight.append(Animal1.weight )+" kg  wazy wiecej niz  Fado "+ fadoWeight.append(Animal2.weight)+" kg");
+        } else{
+            out.println("Fado który wazy " +Animal2.weight +" Jest Ciezszy od Tygrysa");}
+
+            System.out.println("------------------------------------------------------");
+
+        ArrayList<Human> humanList = new ArrayList();
+        humanList.add(Human1);
+        humanList.add(Human2);
+        humanList.add(Human3);
+
+        for(Human d :humanList )
+            System.out.println(d.firstName+" "+(d.lastName)+" "+(d.age));
 
 
 
 
 
 
-
-        System.out.println(Animal2.type);
+       /* System.out.println(Animal2.type);
         System.out.println(Animal2.name);
         System.out.println(Animal2.weight);
 
@@ -59,6 +82,6 @@ public class Main {
         System.out.println(Human2.firstName);
         System.out.println(Human2.age);
         System.out.println(Human2.lastName);
-
+        */
     }
 }
