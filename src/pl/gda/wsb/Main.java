@@ -22,7 +22,7 @@ public class Main {
         Animal Animal2 = new Animal();
         Animal2.type = "Myszoskoczek";
         Animal2.name = "Fado";
-        Animal2.weight = 220;
+        Animal2.weight = 5;
 
         Phone Phone1 = new Phone();
         Phone1.producer = "apple";
@@ -33,7 +33,9 @@ public class Main {
         Phone2.producer = "Samsung";
         Phone2.model = "S8";
 
-
+        if(Animal1.weight>Animal2.weight){
+            System.out.println("Reksio ktory wazy " +Animal1.weight +" kg jest ciezszy od Fado");
+        } else{System.out.println("Fado który wazy " +Animal2.weight +" Jest Ciezszy od Tygrysa");}
 
 
 
